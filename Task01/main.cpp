@@ -8,18 +8,19 @@ using namespace std;
 
 int main() {
 
-	srand(time(NULL));
 
-	int array[SIZE];
 
-	init(array, SIZE,0,100);
+	int array[]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-	cout << "array before bubble sort: " << convert(array,SIZE) << endl;
-	bubble_sort(array, SIZE);
+	init(array, SIZE, -10, 10);
+
+	cout << "array before bubble sort: " << convert(array, SIZE) << endl;
 	
+	selected_sort(array, SIZE);
+
 	cout << "array after bubble sort: " << convert(array, SIZE) << endl;
 
-	
+
 
 	return 0;
 }

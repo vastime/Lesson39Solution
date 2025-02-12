@@ -1,0 +1,7 @@
+﻿Build started...
+1>------ Build started: Project: Task01, Configuration: Debug x64 ------
+1>main.cpp
+1>sort.cpp
+1>Generating Code...
+1>Task01.vcxproj -> D:\Vasileuskiy\lesson39\x64\Debug\Task01.exe
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

@@ -1,17 +1,42 @@
 #include "sort.h"
 void bubble_sort(int* array, int size) {
-	int  size_minus_one = size - 1;
-
-	for (int i = 0; i < size; i++)
+	
+	for (int j = 0; j < size; j++)
 	{
-		for (int k = 0; k < size - 1; k++)
+		bool flag = true;
+		for (int i = 0; i < size - 1 - j; i++)
 		{
-			if (array[k] < array[k + 1])
+			if (array[i] < array[i + 1])
 			{
-				int t = array[k + 1];
-				array[k + 1] = array[k];
-				array[k] = t;
+				int t = array[i + 1];
+				array[i + 1] = array[i];
+				array[i] = t;
+				flag = false;
 			}
+			
+		}
+		if (flag) {
+			break;
 		}
 	}
+}
+  void selected_sort(int* array, int size) {
+	  int count = 0;
+	for  (int j = 0; j < size; j++)
+	{
+		int index = j;
+		for (int  i = j + 1; i < size; i++)
+		{
+			if (array[i] < array[index]) {
+				index = i;
+			}
+			count++;
+		}
+	
+		int t = array[j];
+		array[j] = array[index];
+		array[index] = t;
+		
+	}
+	
 }
